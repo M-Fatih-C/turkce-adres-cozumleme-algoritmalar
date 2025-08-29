@@ -1,6 +1,6 @@
-# Türkçe Adres Çözümleme — 25+ Algoritma Koleksiyonu
+#Teknofest Hepsiburada Adres Çözümleme Hackathonu/ Türkçe Adres Çözümleme — 25+ Algoritma Koleksiyonu
 
-Bu depo, adres normalizasyonu ve adres → **label/cluster** tahmini için denediğin farklı yaklaşımları **ayrı klasörler** halinde toplar. Her klasörde, ilgili kod ve açıklayıcı bir `README.md` bulunur.
+Bu depo, adres normalizasyonu ve adres → **label/cluster** tahmini için denediğimiz farklı yaklaşımlar.
 
 ## İçindekiler
 | # | Yaklaşım | Klasör |
