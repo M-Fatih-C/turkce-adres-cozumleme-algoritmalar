@@ -1,3 +1,53 @@
+# Türkçe Adres Çözümleme — 25+ Algoritma Koleksiyonu
+
+Bu depo, adres normalizasyonu ve adres → **label/cluster** tahmini için denediğin farklı yaklaşımları **ayrı klasörler** halinde toplar. Her klasörde, ilgili kod ve açıklayıcı bir `README.md` bulunur.
+
+## İçindekiler
+| # | Yaklaşım | Klasör |
+|---|---|---|
+| 1 | BERT/Transformer + (Similarity: Fuzzy) | `algorithms/bert-fuzzy` |
+| 2 | BERT/Transformer + (Similarity: Fuzzy) | `notebooks/bert-fuzzy-v2` |
+| 3 | BERT/Transformer + FAISS + LightGBM+XGBoost + (Similarity: Fuzzy) | `notebooks/bert-faiss-xgb-fuzzy` |
+| 4 | BERT/Transformer + PyTorch Model + (Similarity: Cosine+Fuzzy) | `notebooks/bert-torch-cosine` |
+| 5 | BERT/Transformer + TF-IDF + FAISS + CatBoost+LightGBM+PyTorch Model+Random Forest+XGBoost + (Similarity: Fuzzy) | `notebooks/bert-faiss-rf-fuzzy` |
+| 6 | BERT/Transformer + TF-IDF + FAISS + CatBoost+LightGBM+Random Forest+XGBoost + (Similarity: Fuzzy+Levenshtein) | `notebooks/bert-faiss-rf-fuzzy-v2` |
+| 7 | BERT/Transformer + TF-IDF + FAISS + LightGBM + (Similarity: Cosine) | `notebooks/bert-faiss-lgbm-cosine` |
+| 8 | BERT/Transformer + TF-IDF + FAISS + LightGBM + (Similarity: Cosine) | `notebooks/bert-faiss-lgbm-cosine-v2` |
+| 9 | BERT/Transformer + TF-IDF + FAISS + LightGBM + (Similarity: Cosine+Fuzzy+Levenshtein) | `notebooks/bert-faiss-lgbm-cosine-v3` |
+| 10 | BERT/Transformer + TF-IDF + FAISS + LightGBM + (Similarity: Cosine+Levenshtein) | `notebooks/bert-faiss-lgbm-cosine-v4` |
+| 11 | GIS Geocode Hybrid (Nominatim + Metin Benzerliği) | `algorithms/gis-geocode-hybrid` |
+| 12 | GIS Spatial Join Normalizer (İl/İlçe/Mahalle) | `algorithms/gis-spatial-join-normalizer` |
+| 13 | Heuristic / Regex / Baseline | `algorithms/baseline` |
+| 14 | Heuristic / Regex / Baseline | `algorithms/baseline-v2` |
+| 15 | Heuristic / Regex / Baseline | `algorithms/baseline-v3` |
+| 16 | Heuristic / Regex / Baseline | `notebooks/baseline-v4` |
+| 17 | Heuristic / Regex / Baseline | `notebooks/baseline-v5` |
+| 18 | TF-IDF | `notebooks/tfidf` |
+| 19 | TF-IDF | `notebooks/tfidf-v2` |
+| 20 | TF-IDF + (Similarity: Cosine+Fuzzy) | `notebooks/tfidf-cosine` |
+| 21 | TF-IDF + CatBoost+LightGBM+Random Forest+XGBoost + (Similarity: Fuzzy+Levenshtein) | `notebooks/tfidf-rf-fuzzy` |
+| 22 | TF-IDF + CatBoost+LightGBM+Random Forest+XGBoost + (Similarity: Fuzzy+Levenshtein) | `notebooks/tfidf-rf-fuzzy-v2` |
+| 23 | TF-IDF + FAISS | `notebooks/tfidf-faiss` |
+| 24 | TF-IDF + LightGBM+Logistic Regression+Naive Bayes | `notebooks/tfidf-logreg` |
+| 25 | TF-IDF + PyTorch Model | `notebooks/tfidf-torch` |
+
+## Kurulum
+```bash
+pip install -r requirements.txt
+```
+
+## Veri Düzeni
+- `data/` klasörü örnek veri dosyaları için ayrılmıştır (gizli veri yüklemeyin).
+- Her algoritma kendi klasöründe çalışır ve çıktı olarak kökte `submission.csv` üretmesi hedeflenir.
+
+## Çoğaltılabilirlik (Reproducibility)
+- Her algoritma klasöründeki `README.md`’de **girdi-çıktı**, **çalıştırma** ve **bileşenler** açıklanmıştır.
+- Ortak bağımlılıklar kökteki `requirements.txt` dosyasındadır.
+
+## Lisans
+MIT — ayrıntılar için `LICENSE` dosyasına bakın.
+
+
 🇹🇷 Türkçe — Problem Tanımı ve Kapsam
 Amaç
 
