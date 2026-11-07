@@ -4,6 +4,23 @@ An archive of Turkish-address normalization and task-specific label prediction
 experiments from the Teknofest/Hepsiburada hackathon. It preserves competing
 approaches and historical notebooks, rather than offering one production parser.
 
+## Problem and motivation
+
+The research explores two related tasks: normalizing noisy Turkish address text
+into administrative/street components, and predicting a competition-specific
+`label` or cluster from an address. These tasks have different outputs; the
+archive does not implement one common parsing interface for every experiment.
+
+Turkish addresses contain inconsistent abbreviations (`Mah./Mh.`, `Cad./Cd.`,
+`Sok./Sk.`), dotted/dotless-I and other diacritic variations, missing or reordered
+fields, and neighbourhood/street names repeated across provinces. Administrative
+boundaries also change. Simple text similarity can therefore select a plausible
+but geographically wrong address.
+
+The [research guide](docs/RESEARCH_GUIDE.md) restores the full experiment directory
+index, input/output contracts, method distinctions and an evaluation plan.
+[Türkçe proje özeti](README.tr.md) retains the original problem context.
+
 ## Experiment families
 
 | Family | Where to start | Main distinction |
@@ -33,6 +50,24 @@ individual code may expect Colab/local paths or additional boundary/model files.
 The training CSV is not included. GIS normalization may also require authorized
 administrative boundary data. Review a selected script's path constants and
 README before running it; there is no universal root training command.
+
+## Selecting and reproducing an experiment
+
+1. Choose a folder from the [25-entry directory index](docs/RESEARCH_GUIDE.md).
+   These are experiment folders, not 25 independently validated algorithms.
+2. Inspect its source and local README; compare the notebook dependencies and
+   referenced files against the [source inventory](docs/EXPERIMENTS.md).
+3. Obtain authorized training data and any external model/boundary files. Adapt
+   hard-coded paths in an isolated copy; retain a record of those adaptations.
+4. Run that script or notebook in its own environment. GIS scripts can contact
+   external geocoders, so review permission and provider requirements first.
+5. Record input version, split, seed, parameters and output path. Different runs
+   write different submission filenames; there is no universal root output file.
+
+Classification accuracy/F1, normalization component accuracy, error analysis and
+latency/memory are useful evaluation dimensions. They are an evaluation plan,
+not measured results here. A version suffix or a notebook's saved output is not
+sufficient to rank experiments; shared data/splits and leakage checks are needed.
 
 ## Known execution gaps
 
